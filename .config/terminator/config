@@ -62,7 +62,7 @@
     use_theme_colors = True
   [[Solarized]]
     background_color = "#002b36"
-    background_darkness = 0.8
+    background_darkness = 0.9
     background_type = transparent
     cursor_color = "#aaaaaa"
     font = mononoki Nerd Font 12
