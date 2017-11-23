@@ -4,16 +4,67 @@
   [[default]]
     [[[child1]]]
       parent = window0
+      profile = default
       type = Terminal
     [[[window0]]]
       parent = ""
       type = Window
+  [[3term]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = d1e2c435-7e31-46b8-a3e0-32a0f2a8c46e
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 26:23
+      size = 1294, 479
+      title = pruebas@smi-jclinux: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 737
+      ratio = 0.571761055081
+      type = HPaned
+    [[[child3]]]
+      order = 1
+      parent = child1
+      position = 251
+      ratio = 0.529535864979
+      type = VPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = Solarized
+      type = Terminal
+      uuid = d1e2c435-7e31-46b8-a3e0-32a0f2a8c46e
+    [[[terminal4]]]
+      order = 0
+      parent = child3
+      profile = Solarized
+      type = Terminal
+      uuid = b48a7e96-c3ff-4da5-bfd0-6cc29a827597
+    [[[terminal5]]]
+      order = 1
+      parent = child3
+      profile = Solarized
+      type = Terminal
+      uuid = 80bc09a6-1990-4988-87cc-2db4ee3ba171
 [plugins]
 [profiles]
   [[default]]
     background_color = "#002b36"
+    background_darkness = 0.8
     cursor_color = "#aaaaaa"
-    font = mononoki Nerd Font 10
+    font = Monospace 11
     foreground_color = "#839496"
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_theme_colors = True
+  [[Solarized]]
+    background_color = "#002b36"
+    background_darkness = 0.8
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = mononoki Nerd Font 12
+    foreground_color = "#839496"
     use_system_font = False
