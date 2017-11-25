@@ -10,6 +10,10 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
+#Search backward in the history for a line beginning with the first word in the buffer
+bindkey '\e[A' history-beginning-search-backward
+bindkey '\e[B' history-beginning-search-forward
+
 # Use modern completion system
 autoload -Uz compinit
 compinit
