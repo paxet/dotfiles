@@ -1,31 +1,28 @@
-# prompt theme system, not in use because of forcing agnoster-theme later
-#autoload -Uz promptinit
-#promptinit
-#prompt adam1
+# Load plugins: modern completion system and prompt themes
+autoload -Uz compinit #promptinit
+compinit
+# promptinit
+# prompt -l adam1
 
+# history config
 setopt histignorealldups sharehistory
-
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-#Search backward in the history for a line beginning with the first word in the buffer
-bindkey '\e[A' history-beginning-search-backward
-bindkey '\e[B' history-beginning-search-forward
-
-# Use modern completion system
-autoload -Uz compinit
-compinit
-
-# download zgen if we don't have it
-if [[ ! -a ~/.zgen/zgen.zsh ]]; then
-  git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
-fi
-
 # load virtualenvwrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source =virtualenvwrapper.sh
+if ! type "virtualenvwrapper.sh" > /dev/null; then
+  echo "YOU MUST DO: pip3 install virtualenvwrapper"
+else
+  source =virtualenvwrapper.sh
+fi
+
+# download zgen if we don't have it
+if [[ ! -a "${HOME}/.zgen/zgen.zsh" ]]; then
+  git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+fi
 
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
@@ -44,6 +41,8 @@ if ! zgen saved; then
   zgen load MichaelAquilina/zsh-you-should-use
   # completions
   zgen load zsh-users/zsh-completions src
+  #ZSH port of the FISH shell's history search
+  zgen load zsh-users/zsh-history-substring-search
 
   # generate the init script from plugins above
   zgen save
@@ -53,6 +52,28 @@ fi
 # add user to hide user from command prompt
 DEFAULT_USER=paxet
 
+# set neovim or vim as default editor
+if ! type "nvim" > /dev/null; then
+    export EDITOR="vi"
+else
+    export EDITOR="nvim"
+fi
+
+# bind UP and DOWN arrow keys to zsh-history-substring-search
+# if it doesn't work, replace bindings, by the ones found wit:
+# $] cat -v (press arrow UP and then arrow DOWN to see the characters)
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+# home and end keys
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+
 # aliases
-alias ls="ls --color=auto"
+alias ls="pwd; ls --color=auto"
 alias terminator="terminator -l 3term"
+
+# colors
+if [[ -a "${HOME}/.dir_colors/dircolors" ]]; then
+  eval `dircolors ~/.dir_colors/dircolors`
+fi
+
