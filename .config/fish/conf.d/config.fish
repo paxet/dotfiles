@@ -9,9 +9,7 @@ if test -f ~/.config/fish/conf.d/omf.fish
             omf install bobthefish
         end
         #Test for virtualfish
-        if test -d ~/.local/share/omf/pkg/virtualfish
-            ;;
-        else
+        if test ! -d ~/.local/share/omf/pkg/virtualfish
             omf install virtualfish
         end
     end
