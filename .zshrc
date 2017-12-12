@@ -48,6 +48,18 @@ if ! zgen saved; then
   zgen save
 fi
 
+#Need to source vte.sh for Tilix terminal to work properly
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+  export TERM="xterm-256color"
+  VTE_FILE="/etc/profile.d/vte.sh"
+  VTE_FILE_VERS="/etc/profile.d/vte-2.91.sh"
+  if [ -e "$VTE_FILE" ]; then
+    source "$VTE_FILE"
+  elif [ -e "$VTE_FILE_VERS" ]; then
+    source "$VTE_FILE_VERS"
+  fi
+fi
+
 ### My customizations
 # add user to hide user from command prompt
 DEFAULT_USER=paxet
