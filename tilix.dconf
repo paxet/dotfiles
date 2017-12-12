@@ -1,0 +1,23 @@
+[/]
+warn-vte-config-issue=true
+
+[profiles]
+list=['84753e50-2adc-4221-ba84-456c501073df']
+default='84753e50-2adc-4221-ba84-456c501073df'
+
+[profiles/84753e50-2adc-4221-ba84-456c501073df]
+foreground-color='#A7A7A7'
+visible-name='Fish base16-dark'
+palette=['#1E1E1E', '#CF6A4C', '#8F9D6A', '#F9EE98', '#7587A6', '#9B859D', '#AFC4DB', '#A7A7A7', '#5F5A60', '#CF6A4C', '#8F9D6A', '#F9EE98', '#7587A6', '#9B859D', '#AFC4DB', '#FFFFFF']
+custom-command='/usr/bin/fish'
+badge-color-set=false
+use-system-font=false
+cursor-colors-set=false
+highlight-colors-set=false
+use-theme-colors=false
+use-custom-command=true
+bold-color-set=false
+font='mononoki Nerd Font 12'
+background-color='#1E1E1E'
+background-transparency-percent=15
+dim-transparency-percent=50
