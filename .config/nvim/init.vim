@@ -81,7 +81,7 @@ autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
 set encoding=utf-8
 
 " Set font when running in gui
-"set guifont=Mononoki\ Nerd\ Font\ 18
+"set guifont=Inconsolata\ Nerd\ Font\ Mono\ Medium \18
 
 """" Color Schemes """"""
 set background=light
