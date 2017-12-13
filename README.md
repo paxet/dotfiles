@@ -2,7 +2,14 @@
 My dotfiles for neovim, zsh, fish shell (playing with it lately)...
 
 ## Nerd Font
-A nerd font must be installed. Currently using 'Mononoki'
+A nerd font must be installed. Currently using 'Inconsolata'
+
+$] wget -c https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Inconsolata/complete/Inconsolata%20Nerd%20Font%20Complete%20Mono.otf
+$] wget -c https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Inconsolata/complete/Inconsolata%20Nerd%20Font%20Complete.otf
+$] mkdir --parents ~/.local/share/fonts
+$] mv Inconsolata*.otf ~/.local/share/fonts/
+$] chmod 644 ~/.local/share/fonts/Inconsolata*.otf
+$] fc-cache
 
 ## Tilix tiling terminal emulator
 To load tiling settings:
