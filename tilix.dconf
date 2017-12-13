@@ -7,8 +7,8 @@ default='84753e50-2adc-4221-ba84-456c501073df'
 
 [profiles/84753e50-2adc-4221-ba84-456c501073df]
 foreground-color='#A7A7A7'
-visible-name='Fish base16-dark'
-palette=['#1E1E1E', '#CF6A4C', '#8F9D6A', '#F9EE98', '#7587A6', '#9B859D', '#AFC4DB', '#A7A7A7', '#5F5A60', '#CF6A4C', '#8F9D6A', '#F9EE98', '#7587A6', '#9B859D', '#AFC4DB', '#FFFFFF']
+visible-name='Fish Solarized Dark'
+palette=['#063541', '#DB312E', '#849900', '#B48800', '#258AD1', '#D23581', '#29A097', '#EDE7D4', '#002A35', '#CA4A15', '#576D74', '#647A82', '#829395', '#6B70C3', '#92A0A0', '#FCF5E2']
 custom-command='/usr/bin/fish'
 badge-color-set=false
 use-system-font=false
@@ -17,7 +17,7 @@ highlight-colors-set=false
 use-theme-colors=false
 use-custom-command=true
 bold-color-set=false
-font='mononoki Nerd Font 12'
-background-color='#1E1E1E'
+font='Inconsolata Nerd Font Mono Medium 14'
+background-color='#002A35'
 background-transparency-percent=15
 dim-transparency-percent=50
