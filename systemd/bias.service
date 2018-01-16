@@ -1,0 +1,9 @@
+[Unit]
+Description=CPU bias
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/cpupower -c all set --perf-bias 0
+
+[Install]
+WantedBy=multi-user.target
