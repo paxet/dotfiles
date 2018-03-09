@@ -23,7 +23,8 @@ $] sudo pip3 install virtualenv
 Seems history search is not functioning
 
 ## Fish shell
-WIP, fix ASAP
+$] omf install bobthefish
+$] omf theme bobthefish
 
 ## Terminator
 Used brefly in the past
