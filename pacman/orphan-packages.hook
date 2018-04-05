@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Orphaned pkgs. Uninstall in fish with: pacman -Rn (pacman -Qdtq)
+When = PostTransaction
+Exec = /usr/bin/bash -c "/usr/bin/pacman -Qtd || /usr/bin/echo '=> None found.'"
