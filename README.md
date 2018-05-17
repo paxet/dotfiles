@@ -1,5 +1,5 @@
 # dotfiles
-My dotfiles for [neovim](https://wiki.archlinux.org/index.php/Neovim), [fish shell](https://wiki.archlinux.org/index.php/Fish), [pacman hooks](https://wiki.archlinux.org/index.php/Pacman), [systemd unit files](https://wiki.archlinux.org/index.php/Systemd) and more.
+My dotfiles for [neovim](https://wiki.archlinux.org/index.php/Neovim), [fish shell](https://wiki.archlinux.org/index.php/Fish), [tilix](https://gnunn1.github.io/tilix-web/), [pacman hooks](https://wiki.archlinux.org/index.php/Pacman), [systemd unit files](https://wiki.archlinux.org/index.php/Systemd) and more.
 
 ## Nerd Font
 A nerd font must be installed. Currently using 'Inconsolata'
@@ -16,16 +16,17 @@ To load tiling settings:
 
     $] dconf load /com/gexperts/Tilix/ < tilix.dconf
 
-## Virtualenv for python
-Install virtualenv module to use autoactivation in zsh and/or fish
+## Pipenv for managing python virtualenvs and dependencies
+Create/manage virtualenvs and dependencies with ease.
 
-    $] sudo pip3 install virtualenv
+    $] sudo pip3 install pipenv
 
 ## Fish shell
-Really interesting one. Not for a login shell replacement but for dayli use launching it through Tilix
+My default shell for daily use. Really interesting one with nice features.
 
-    $] omf install bobthefish
-    $] omf theme bobthefish
+    $] cp dotfiles/.config/fish/conf.d/config.fish ~/.config/fish/conf.d/
+    $] chsh -s /usr/bin/fish
+    $] fish
 
 ## Pacman hooks
 Place it in: /etc/pacman.d/hooks/
@@ -34,15 +35,3 @@ Place it in: /etc/pacman.d/hooks/
 > version of pacman-mirrorlist gets installed. orphanedpackages.hook ->
 > Search for orphaned packages after a system upgrade and lists it.
 > systemd-boot.hook -> Updates systemd-boot when systemd is upgraded.
-
-## Currently not in use
-Tools used in the past, only here for legacy purpouses because maybe someday I'll use it again.
-
-
-### Zsh
-Seems history search is not functioning with my config.
-
-
-### Terminator
-Used brefly untill I fell in love with Tilix.
-
