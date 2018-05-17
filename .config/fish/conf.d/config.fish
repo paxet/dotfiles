@@ -71,6 +71,9 @@ if test ! -f ~/.config/fish/functions/fish_greeting.fish
     funcsave fish_greeting
 end
 
+# Set this to tell activate.fish in virtualenv to don't echo name in prompt
+set VIRTUAL_ENV_DISABLE_PROMPT 1
+
 # Apply customization to your liking from here...
 # Aliases...
 # Global Variables...
