@@ -1,4 +1,4 @@
-# Configure fisherman as plugin system for fish
+# Configure fisherman as plugin system for fish and some plugins
 if test ! -f ~/.config/fish/functions/fisher.fish
     # Firts time init
     echo "### First time launch, will install fisherman and some modules."
@@ -27,7 +27,16 @@ if test ! -f ~/.config/fish/functions/fisher.fish
         if test ! -f ~/.config/fish/completions/pipenv.fish
             mkdir --parents ~/.config/fish/completions/
             echo "eval (pipenv --completion)" > ~/.config/fish/completions/pipenv.fish
-            builtin source ~/.config/fish/completions/pipenv.fish
+            switch $SHELL
+                case /usr/bin/fish /bin/fish
+                    builtin source ~/.config/fish/completions/pipenv.fish
+                case '*'
+                    # The first time with fish
+                    echo "### SHELL variable not pointing at fish. Be sure it's your default shell or"
+                    echo "    export SHELL=/bin/fish before launching Fish Shell"
+                    echo "### Pipenv completion will be enabled in future fish sessions and needs the"
+                    echo "    SHELL variable set to fish to work properly."
+            end
         end
     else
         echo "### I suggest you to install pipenv for managing "
@@ -35,12 +44,17 @@ if test ! -f ~/.config/fish/functions/fisher.fish
         echo "### Then you need to: \ue0b0 fisher pipenv"
     end
 
+    # If we are running fish with tilix, we'll need fish-vte
+    if set -q TILIX_ID 
+        if set -q modules
+            set modules fish-vte $modules
+        else
+            set modules fish-vte
+        end
+    end
+
     # Install modules priorly declared/configured
     if set -q modules
-        #echo "###"
-        #echo "# There are modules you should install."
-        #echo "# Please, do it now with: \ue0b0 fisher $modules"
-        #echo "###"
         fisher $modules; and echo "### Got it. Enjoy.";
         set -e modules
     end
