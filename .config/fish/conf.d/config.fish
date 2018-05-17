@@ -60,6 +60,17 @@ if test ! -f ~/.config/fish/functions/fisher.fish
     end
 end
 
+if test ! -f ~/.config/fish/functions/fish_greeting.fish
+    # If there is no greeting, set it to show: machine name, uptime, users, load...
+    function fish_greeting
+        set_color $fish_color_autosuggestion
+        uname -nor
+        uptime
+        set_color normal
+    end
+    funcsave fish_greeting
+end
+
 # Apply customization to your liking from here...
 # Aliases...
 # Global Variables...
