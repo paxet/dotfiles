@@ -60,14 +60,14 @@ if test ! -f ~/.config/fish/functions/fisher.fish
     end
 end
 
+set mygreet "function fish_greeting
+    set_color \$fish_color_autosuggestion
+    echo (date \"+%H:%M:%S\")' | '(uname -o)' | '(whoami)'@'(hostname)
+    set_color normal
+end"
 if test ! -f ~/.config/fish/functions/fish_greeting.fish
-    # If there is no greeting, set it to show: machine name, uptime, users, load...
-    function fish_greeting
-        set_color $fish_color_autosuggestion
-        uname -nor
-        uptime
-        set_color normal
-    end
+    # If no greeting, set it to show: machine name, users and OS
+    eval $mygreet
     funcsave fish_greeting
 end
 
