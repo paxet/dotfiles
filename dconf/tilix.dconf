@@ -1,5 +1,8 @@
 [/]
 warn-vte-config-issue=true
+control-click-titlebar=true
+new-window-inherit-state=false
+prompt-on-new-session=false
 
 [profiles]
 list=['84753e50-2adc-4221-ba84-456c501073df']
@@ -9,15 +12,15 @@ default='84753e50-2adc-4221-ba84-456c501073df'
 foreground-color='#A7A7A7'
 visible-name='Fish Solarized Dark'
 palette=['#063541', '#DB312E', '#849900', '#B48800', '#258AD1', '#D23581', '#29A097', '#EDE7D4', '#002A35', '#CA4A15', '#576D74', '#647A82', '#829395', '#6B70C3', '#92A0A0', '#FCF5E2']
-custom-command='/usr/bin/fish'
+custom-command=''
 badge-color-set=false
 use-system-font=false
 cursor-colors-set=false
 highlight-colors-set=false
 use-theme-colors=false
-use-custom-command=true
+use-custom-command=false
 bold-color-set=false
 font='Inconsolata Nerd Font Mono Medium 14'
 background-color='#002A35'
-background-transparency-percent=15
-dim-transparency-percent=50
+background-transparency-percent=11
+dim-transparency-percent=22
