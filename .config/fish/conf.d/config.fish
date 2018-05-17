@@ -28,7 +28,7 @@ if test ! -f ~/.config/fish/functions/fisher.fish
             mkdir --parents ~/.config/fish/completions/
             echo "eval (pipenv --completion)" > ~/.config/fish/completions/pipenv.fish
             switch $SHELL
-                case /usr/bin/fish /bin/fish
+                case /usr/bin/fish /bin/fish /usr/local/bin/fish
                     builtin source ~/.config/fish/completions/pipenv.fish
                 case '*'
                     # The first time with fish
