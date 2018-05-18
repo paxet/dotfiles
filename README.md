@@ -31,7 +31,10 @@ My default shell for daily use. Really interesting one with nice features.
 ## Pacman hooks
 Place it in: /etc/pacman.d/hooks/
 
-> mirrorupgrade.hook -> Uses "reflector" to update mirrorlist when a new
-> version of pacman-mirrorlist gets installed. orphanedpackages.hook ->
-> Search for orphaned packages after a system upgrade and lists it.
+> mirrorupgrade.hook -> Uses "reflector" to update mirrorlist when a new version of pacman-mirrorlist gets installed.
+>
+> orphanedpackages.hook -> Search for orphaned packages after a system upgrade and lists it.
+>
 > systemd-boot.hook -> Updates systemd-boot when systemd is upgraded.
+>
+> remove_old_cache.hook -> Remove all but the currently installed and the previously used cache
