@@ -38,3 +38,8 @@ Place it in: /etc/pacman.d/hooks/
 > systemd-boot.hook -> Updates systemd-boot when systemd is upgraded.
 >
 > remove_old_cache.hook -> Remove all but the currently installed and the previously used cache
+
+## Udev Rules
+Place it in: /etc/udev/rules.d/
+
+> 60-ioscheduler.rules -> First add "scsi_mod.use_blk_mq=1" as kernel parameter. Afterwards will use multi-queue scheduler, md-deadline for non-rotational disks and bfq for rotational ones.
