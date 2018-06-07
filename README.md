@@ -49,3 +49,9 @@ Place it in: /etc/udev/rules.d/
 Superb editor with pipenv support to manage python projects. Currently using OSS version from AUR.
 
     $] aurman -S code
+
+Plugins for VSCode I use. Install bia Ctrl+P:
+
+- ext install ms-python.python
+- ext install njpwerner.autodocstring
+- ext install wholroyd.jinja
