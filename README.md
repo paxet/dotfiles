@@ -2,13 +2,14 @@
 My dotfiles for [neovim](https://wiki.archlinux.org/index.php/Neovim), [fish shell](https://wiki.archlinux.org/index.php/Fish), [tilix](https://gnunn1.github.io/tilix-web/), [pacman hooks](https://wiki.archlinux.org/index.php/Pacman), [systemd unit files](https://wiki.archlinux.org/index.php/Systemd) and more.
 
 ## Nerd Font
-A nerd font must be installed. Currently using 'Inconsolata'
+A nerd font must be installed. Currently using 'Inconsolata' for the shell and Fira Code for VSCode
 
     $] wget -c https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Inconsolata/complete/Inconsolata%20Nerd%20Font%20Complete%20Mono.otf
     $] wget -c https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Inconsolata/complete/Inconsolata%20Nerd%20Font%20Complete.otf
+    $] wget -c https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Medium/complete/Fura%20Code%20Medium%20Nerd%20Font%20Complete%20Mono.otf
     $] mkdir --parents ~/.local/share/fonts
-    $] mv Inconsolata*.otf ~/.local/share/fonts/
-    $] chmod 644 ~/.local/share/fonts/Inconsolata*.otf
+    $] mv *.otf ~/.local/share/fonts/
+    $] chmod 644 ~/.local/share/fonts/*.otf
     $] fc-cache
 
 ## Tilix tiling terminal emulator
@@ -43,3 +44,8 @@ Place it in: /etc/pacman.d/hooks/
 Place it in: /etc/udev/rules.d/
 
 > 60-ioscheduler.rules -> First add "scsi_mod.use_blk_mq=1" as kernel parameter. Afterwards will use multi-queue scheduler, md-deadline for non-rotational disks and bfq for rotational ones.
+
+## Visual Studio Code
+Superb editor with pipenv support to manage python projects. Currently using OSS version from AUR.
+
+    $] aurman -S code

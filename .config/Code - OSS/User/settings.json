@@ -1,0 +1,13 @@
+{
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "editor.fontFamily": "'FuraCode Nerd Font Mono', 'monospace', monospace",
+    "terminal.external.linuxExec": "tilix",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "files.associations": {
+        "*.fish": "shellscript"
+    },
+    "git.confirmSync": false,
+}
