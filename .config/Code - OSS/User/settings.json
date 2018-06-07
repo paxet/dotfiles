@@ -10,4 +10,5 @@
         "*.fish": "shellscript"
     },
     "git.confirmSync": false,
+    "workbench.colorTheme": "Monokai",
 }
