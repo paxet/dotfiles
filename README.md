@@ -55,3 +55,4 @@ Plugins for VSCode I use. Install bia Ctrl+P:
 - ext install ms-python.python
 - ext install njpwerner.autodocstring
 - ext install wholroyd.jinja
+- ext install piotrpalarz.vscode-gitignore-generator
