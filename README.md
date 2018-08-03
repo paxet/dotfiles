@@ -56,3 +56,6 @@ Plugins for VSCode I use. Install bia Ctrl+P:
 - ext install njpwerner.autodocstring
 - ext install wholroyd.jinja
 - ext install piotrpalarz.vscode-gitignore-generator
+- ext install file-icons.file-icons
+- ext install wayou.vscode-todo-highlight
+- ext install lihui.vs-color-picker
