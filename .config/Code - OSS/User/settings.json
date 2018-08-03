@@ -3,12 +3,14 @@
     "telemetry.enableCrashReporter": false,
     "editor.fontFamily": "'FuraCode Nerd Font Mono', 'monospace', monospace",
     "terminal.external.linuxExec": "tilix",
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
+    "terminal.integrated.fontFamily": "'Inconsolata Nerd Font Mono', 'monospace', monospace",
     "files.associations": {
         "*.fish": "shellscript"
     },
     "git.confirmSync": false,
     "workbench.colorTheme": "Monokai",
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.iconTheme": "file-icons",
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
 }
