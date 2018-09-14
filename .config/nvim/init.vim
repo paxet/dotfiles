@@ -8,11 +8,16 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'skywind3000/asyncrun.vim'
 " Async file running
 Plug 'pedsm/sprint'
-" Asynchronous keyword completion
 if has('nvim')
+" Asynchronous keyword completion
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Browse files
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 else
+" Asynchronous keyword completion
   Plug 'Shougo/deoplete.nvim'
+" Browse files
+  Plug 'Shougo/defx.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
@@ -31,6 +36,8 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'thirtythreeforty/lessspace.vim'
 " Solarized color
 Plug 'altercation/vim-colors-solarized'
+" Dev icons for file manager
+Plug 'ryanoasis/vim-devicons'
 " Status bar mods
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
