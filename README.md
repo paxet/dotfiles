@@ -30,7 +30,13 @@ My default shell for daily use. Really interesting one with nice features.
     $] fish
 
 ## Pacman hooks
-Place it in: /etc/pacman.d/hooks/
+Place it in: /etc/pacman.d/hooks
+
+Then install:
+
+    $] sudo pacman -S reflector pacman-contrib
+
+Explanation:
 
 > mirrorupgrade.hook -> Uses "reflector" to update mirrorlist when a new version of pacman-mirrorlist gets installed.
 >
