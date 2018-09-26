@@ -58,10 +58,14 @@ Superb editor with pipenv support to manage python projects. Currently using OSS
 
 Plugins for VSCode I use. Install bia Ctrl+P:
 
-- ext install ms-python.python
-- ext install njpwerner.autodocstring
-- ext install wholroyd.jinja
-- ext install piotrpalarz.vscode-gitignore-generator
-- ext install file-icons.file-icons
-- ext install wayou.vscode-todo-highlight
-- ext install lihui.vs-color-picker
+| Command                                            | Description                                            |
+| -------------------------------------------------- | ------------------------------------------------------ |
+| ext install ms-python.python                       | *(For Python development)*                             |
+| ext install njpwerner.autodocstring                | *(Helper to create function documentation)*            |
+| ext install wholroyd.jinja                         | *(Syntax highlighting for jinja2 templates)*           |
+| ext install piotrpalarz.vscode-gitignore-generator | *(Generate .gitignore from https://www.gitignore.io/)* |
+| ext install file-icons.file-icons                    | *(Icons to represent file types in the project tree)*   |
+| ext install wayou.vscode-todo-highlight            | *(Highlight TODOs, FIXMEs and more)*                   |
+| ext install lihui.vs-color-picker                  | *(Useful to select color code)*                        |
+| ext install joaompinto.asciidoctor-vscode          | *(Preview for asciidoc files)*                          |
+
