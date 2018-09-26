@@ -56,7 +56,7 @@ Superb editor with pipenv support to manage python projects. Currently using OSS
 
     $] aurman -S code
 
-Plugins for VSCode I use. Install bia Ctrl+P:
+Plugins for VSCode I use. Install via Ctrl+P:
 
 | Command                                            | Description                                            |
 | -------------------------------------------------- | ------------------------------------------------------ |
