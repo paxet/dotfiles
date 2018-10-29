@@ -15,12 +15,12 @@ A nerd font must be installed. Currently using 'Inconsolata' for the shell and F
 ## Tilix tiling terminal emulator
 To load tiling settings:
 
-    $] dconf load /com/gexperts/Tilix/ < tilix.dconf
+    $] dconf load /com/gexperts/Tilix/ < dotfiles/dconf/tilix.dconf
 
 ## [Hyper](https://hyper.is) terminal
 Move Hyper conf to user dir:
 
-    $] mv .hyper.js ~/.hyper.js
+    $] mv dotfiles/.hyper.js ~/.hyper.js
 
 ## Pipenv for managing python virtualenvs and dependencies
 Create/manage virtualenvs and dependencies with ease.
@@ -59,7 +59,7 @@ Place it in: /etc/udev/rules.d/
 ## Visual Studio Code
 Superb editor with pipenv support to manage python projects. Currently using OSS version from AUR.
 
-    $] aurman -S code
+    #] pacman -S code
 
 Plugins for VSCode I use. Install via Ctrl+P:
 
