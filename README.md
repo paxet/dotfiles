@@ -17,6 +17,11 @@ To load tiling settings:
 
     $] dconf load /com/gexperts/Tilix/ < tilix.dconf
 
+## [Hyper](https://hyper.is) terminal
+Move Hyper conf to user dir:
+
+    $] mv .hyper.js ~/.hyper.js
+
 ## Pipenv for managing python virtualenvs and dependencies
 Create/manage virtualenvs and dependencies with ease.
 
